@@ -18,7 +18,14 @@ class Main:
                 return city
             city = cityInput()
                 
-            BloodGroup = input(Fore.LIGHTRED_EX+" BLOOD GROUP "+Style.RESET_ALL+":").upper()
+            def bloodGroup():
+                   Bloods = ["O+","O-","A+","A-","B+","B-","AB+","AB-"]
+                   BloodGroup = input(Fore.LIGHTRED_EX+" BLOOD GROUP "+Style.RESET_ALL+":").upper()
+                   if (BloodGroup not in Bloods):
+                    print(Fore.RED +"You have entered the Blood Group incorrectly! Try again"+Style.RESET_ALL)
+                    BloodGroup = bloodGroup()
+                   return BloodGroup
+            BloodGroup = bloodGroup()
             
             MobileNo= (input(Fore.LIGHTGREEN_EX+" CELL NO "+Style.RESET_ALL+":"))
             
@@ -62,7 +69,14 @@ class Main:
         #list of cities
         cities = ["Coimbatore", "Chennai", "Madurai", "Tiruchirappalli", "Salem", "Tiruppur", "Erode", "Vellore", "Tirunelveli", "Thoothukudi", "Nagercoil", "Thanjavur", "Dindigul", "Cuddalore", "Kanchipuram", "Tiruvannamalai", "Kumbakonam", "Pudukkottai", "Karaikudi", "Pollachi", "Namakkal", "Rajapalayam", "Sivakasi", "Karur", "Ooty", "Kanyakumari", "Chidambaram", "Neyveli", "Kodaikanal", "Rameswaram", "Hosur", "Kovilpatti", "Nagapattinam", "Theni", "Udhagamandalam", "Sirkali", "Arakkonam", "Tiruvallur", "Mayiladuthurai", "Virudhunagar", "Pondicherry", "Ariyalur", "Tindivanam", "Sankarankovil", "Vaniyambadi", "Perambalur", "Pattukkottai", "Namagiripettai", "Metupalayam", "Palladam", "Tenkasi", "Villupuram", "Sathyamangalam", "Gobichettipalayam", "Nellai", "Mettur", "Ranipet", "Thiruvarur", "Sankarapuram", "Karaikkudi", "Tambaram", "Walajapet", "Poonamallee", "Avadi", "Thiruthani", "Gudiyattam", "Bhavani", "Papanasam", "Ambasamudram", "Ramanathapuram", "Paramakudi", "Vridhachalam", "SankaranKoil", "Udumalpet", "Neyveli Township", "Kuniyamuthur", "Kallakurichi", "Jambai", "Edaikodu", "Valparai"]
         #Inputs --->
-        blood=input(f"{Fore.LIGHTRED_EX}Enter the Blood Group{Style.RESET_ALL} (O+,O-,A+,A-,B+,B-,AB+,AB-): ").upper()
+        def bloodGroup():
+                   Bloods = ["O+","O-","A+","A-","B+","B-","AB+","AB-"]
+                   BloodGroup = input(Fore.LIGHTRED_EX+" BLOOD GROUP "+Style.RESET_ALL+":").upper()
+                   if (BloodGroup not in Bloods):
+                    print(Fore.RED +"You have entered the Blood Group incorrectly! Try again"+Style.RESET_ALL)
+                    BloodGroup = bloodGroup()
+                   return BloodGroup
+        blood = bloodGroup()
         def cityInput():
                 cities = ["Coimbatore", "Chennai", "Madurai", "Tiruchirappalli", "Salem", "Tiruppur", "Erode", "Vellore", "Tirunelveli", "Thoothukudi", "Nagercoil", "Thanjavur", "Dindigul", "Cuddalore", "Kanchipuram", "Tiruvannamalai", "Kumbakonam", "Pudukkottai", "Karaikudi", "Pollachi", "Namakkal", "Rajapalayam", "Sivakasi", "Karur", "Ooty", "Kanyakumari", "Chidambaram", "Neyveli", "Kodaikanal", "Rameswaram", "Hosur", "Kovilpatti", "Nagapattinam", "Theni", "Udhagamandalam", "Sirkali", "Arakkonam", "Tiruvallur", "Mayiladuthurai", "Virudhunagar", "Pondicherry", "Ariyalur", "Tindivanam", "Sankarankovil", "Vaniyambadi", "Perambalur", "Pattukkottai", "Namagiripettai", "Metupalayam", "Palladam", "Tenkasi", "Villupuram", "Sathyamangalam", "Gobichettipalayam", "Nellai", "Mettur", "Ranipet", "Thiruvarur", "Sankarapuram", "Karaikkudi", "Tambaram", "Walajapet", "Poonamallee", "Avadi", "Thiruthani", "Gudiyattam", "Bhavani", "Papanasam", "Ambasamudram", "Ramanathapuram", "Paramakudi", "Vridhachalam", "SankaranKoil", "Udumalpet", "Neyveli Township", "Kuniyamuthur", "Kallakurichi", "Jambai", "Edaikodu", "Valparai"]
                 city=input(f"{Fore.LIGHTGREEN_EX}City:")
@@ -114,7 +128,14 @@ class Main:
 #Funtion to list Required blood in all cities
     def bloodInAllCities():
         
-        blood=input(f"{Fore.LIGHTRED_EX}Enter the Blood Group{Style.RESET_ALL} (O+,O-,A+,A-,B+,B-,AB+,AB-): ").upper()
+        def bloodGroup():
+                   Bloods = ["O+","O-","A+","A-","B+","B-","AB+","AB-"]
+                   BloodGroup = input(Fore.LIGHTRED_EX+" BLOOD GROUP "+Style.RESET_ALL+":").upper()
+                   if (BloodGroup not in Bloods):
+                    print(Fore.RED +"You have entered the Blood Group incorrectly! Try again"+Style.RESET_ALL)
+                    BloodGroup = bloodGroup()
+                   return BloodGroup
+        blood = bloodGroup()
         
         #MYSQL DB
         
@@ -173,7 +194,14 @@ class Main:
                         "AB-": {"AB+", "AB-"}
 }
 
-        blood=input(f"{Fore.LIGHTRED_EX}Enter the Blood Group{Style.RESET_ALL} (O+,O-,A+,A-,B+,B-,AB+,AB-): ").upper()
+        def bloodGroup():
+                   Bloods = ["O+","O-","A+","A-","B+","B-","AB+","AB-"]
+                   BloodGroup = input(Fore.LIGHTRED_EX+" BLOOD GROUP "+Style.RESET_ALL+":").upper()
+                   if (BloodGroup not in Bloods):
+                    print(Fore.RED +"You have entered the Blood Group incorrectly! Try again"+Style.RESET_ALL)
+                    BloodGroup = bloodGroup()
+                   return BloodGroup
+        blood = bloodGroup()
         print("1. POSSIBLE DONOR BLOOD GROUP")
         print("2. POSSIBLE RECEIPTANT BLOOD GROUP")
         
@@ -289,7 +317,14 @@ class Main:
             
             patientName = input("Enter the Patient Name: ")
             district= input("Enter the District Name: ")
-            bloodGroup= input("Enter the Blood Group of patient: ")
+            def bloodGroup():
+                   Bloods = ["O+","O-","A+","A-","B+","B-","AB+","AB-"]
+                   BloodGroup = input("Enter the Blood Group of patient :").upper()
+                   if (BloodGroup not in Bloods):
+                    print(Fore.RED +"You have entered the Blood Group incorrectly! Try again"+Style.RESET_ALL)
+                    BloodGroup = bloodGroup()
+                   return BloodGroup
+            bloodGroup = bloodGroup()
             hospitalName= input("Enter the Hospital Name: ")
             cotactNumber= input("Enter the Contact Number: ")
 
